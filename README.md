@@ -1,6 +1,6 @@
 Hierdie is die portefeulje van Ruben van Quickelberger 
 
-Lees gerus deur die dokumentasie leers in die Dokumentasie folder om 'n oorsig van die portefeulje te kry
+Hierdie README bevat nie alleenlik al die informasie oor die portefeulje nie! Lees gerus deur die dokumentasie leers in die Dokumentasie folder om 'n oorsig van die portefeulje te kry
 
 Daar is ook opgedateerde skermskote in die Screenshots folder van al die webblaaie
 
