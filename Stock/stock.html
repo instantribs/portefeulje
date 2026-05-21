@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Stock Information</title>
+      <link rel="stylesheet" href="../Common_assets/universal_table.css">
+   </head>
+
+   <script>
+      if (localStorage.getItem("loggedIn") !== "true") {
+         alert("You must log in first.");
+         window.location.href = "../SignIn/sign.html";
+      }
+   </script>
+
+   <body>
+      <h1>Stock Information</h1>
+      <p>The current stock levels are as follows:</p>
+
+      <!-- ================= CRUD form ================= -->
+
+      <div class="form-container" id="adminPanel">
+         <h2>Add / Edit Stock Item</h2>
+
+         <form id="stockForm">
+            <input type="hidden" id="editIndex">
+
+            <div class="form-grid">
+               <div class="form-field">
+                  <label for="productName">Product Name</label>
+                  <input type="text" id="productName" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="quantity">Quantity Units</label>
+                  <input type="number" id="quantity" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="category">Category</label>
+                  <select id="category" required>
+                     <option value="">Select Category</option>
+                     <option>Fruits</option>
+                     <option>Treatments</option>
+                  </select>
+               </div>
+
+               <div class="form-field">
+                  <label for="stockTake">Last Stock-Take</label>
+                  <input type="date" id="stockTake" required>
+               </div>
+            </div>
+
+            <div class="button-group">
+               <button type="submit" class="save-btn">
+                  Save Item
+               </button>
+
+               <button type="button" class="cancel-btn" onclick="resetForm()">
+                  Cancel Edit
+               </button>
+            </div>
+         </form>
+      </div>
+      
+      <p class="note">
+         Note: Stock levels are updated after each stock-take, which occurs every month.
+         Please have the stock levels updated by a manager after any modifications.
+         Fruit units are 3 kg punnets, while treatment units are 50 kg bags.
+      </p>
+
+      <!-- ================= tabel ================= -->
+
+      <div class="table-wrapper">
+         <table class="universal-table">
+            <thead>
+               <tr>
+                  <th>Product Name</th>
+                  <th>Quantity Units</th>
+                  <th>Category</th>
+                  <th>Last Stock-Take</th>
+                  <th id="actionHeader">Actions</th>
+               </tr>
+            </thead>
+
+            <tbody id="stockTableBody"></tbody>
+         </table>
+      </div>
+
+      <a href="../Portal/portal.html">
+         <button class="return-btn">Return to Staff Portal</button>
+      </a>
+
+      <script src="stock.js"></script>
+
+   </body>
+</html>

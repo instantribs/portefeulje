@@ -1,0 +1,98 @@
+/* ================= hele bladsy ================= */
+body {
+   font-family: system-ui, Arial, Helvetica, sans-serif;
+   background: #e6e6e6;
+   margin: 0;
+}
+
+.container {
+   max-width: 800px;
+   width: 90%;
+   margin: 60px auto;
+   text-align: center;
+}
+
+/* ================= teks ================= */
+h1 {
+   font-size: clamp(32px, 6vw, 64px);
+   margin-bottom: 10px;
+}
+
+.subtitle {
+   font-size: clamp(16px, 3vw, 22px);
+   color: #333;
+   margin-bottom: 40px;
+}
+
+/* ================= signin vorm ================= */
+.form-row {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+   margin: 25px 0;
+}
+
+label {
+   font-size: 18px;
+   min-width: 100px;
+   text-align: right;
+}
+
+input {
+   flex: 1;
+   max-width: 500px;
+   width: 100%;
+   padding: 14px;
+   border: none;
+   border-radius: 25px;
+   font-size: 16px;
+}
+
+/* ================= knoppies ================= */
+.button-row {
+   margin-top: 40px;
+   display: flex;
+   gap: 20px;
+}
+
+.btn {
+   flex: 1;
+   padding: 20px;
+   font-size: 18px;
+   border-radius: 20px;
+   text-decoration: none;
+   color: white;
+   display: inline-block;
+}
+
+.btn-home {
+   background: #7a7a7a;
+}
+
+.btn-home:hover {
+   background: #667;
+}
+
+.btn-portal {
+   background: #4c8f1a;
+}
+
+.btn-portal:hover {
+   background: #188330;
+}
+
+/* ================= mobile ================= */
+@media (max-width: 600px) {
+   .form-row {
+      flex-direction: column;
+   }
+
+   .button-row {
+      flex-direction: column;
+   }
+
+   label {
+      text-align: center;
+   }
+}

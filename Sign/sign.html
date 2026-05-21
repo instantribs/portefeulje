@@ -1,0 +1,42 @@
+
+<!--
+   Hierdie bladsy aanvaar net sekere spesifieke gebruikers en wagwoorde
+   Indien u die bladsy wil toets, gebruik gerus die volgende inligting:
+   Vir admin toegang:         Naam: reuben     Wagwoord: lemmein
+   Vir nie-admin toegang:     Naam: klasie     Wagwoord: heeljag
+   Die ander gebruikers gelys in sign.js sal ook aanvaar word
+-->
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Staff Sign-In</title>
+      <link rel="stylesheet" href="sign.css">
+   </head>
+
+   <body>
+      <div class="container">
+         <h1>Staff Sign-In</h1>
+         <p class="subtitle">Staff members, please sign in to access the Staff Portal</p>
+
+         <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" type="text">
+         </div>
+
+         <div class="form-row">
+            <label for="password">Password</label>
+            <input id="password" type="password">
+         </div>
+
+         <div class="button-row">
+            <a href="../Home/home.html" class="btn btn-home">Return to<br>Homepage</a>
+            <button onclick="login()" class="btn btn-portal">Proceed to<br>Staff Portal</button>
+         </div>
+
+         <script src="sign.js"></script>
+      </div>
+   </body>
+</html>

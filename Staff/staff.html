@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Staff Information</title>
+      <link rel="stylesheet" href="../Common_assets/universal_table.css">
+   </head>
+
+   <script>
+      if (localStorage.getItem("loggedIn") !== "true") {
+         alert("You must log in first.");
+         window.location.href = "../SignIn/sign.html";
+      }
+
+      if (localStorage.getItem("isAdmin") !== "true") {
+         alert("Access denied. Admins only.");
+         window.location.href = "../Portal/portal.html";
+      }
+   </script>
+
+   <body>
+      <h1>Staff Information</h1>
+
+      <!-- ================= CRUD form ================= -->
+
+      <div class="form-container">
+         <h2>Add / Edit Staff Member</h2>
+
+         <form id="staffForm">
+            <input type="hidden" id="editIndex">
+
+            <div class="form-grid">
+               <div class="form-field">
+                  <label for="employeeId">Employee ID</label>
+                  <input type="text" id="employeeId" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="surname">Surname</label>
+                  <input type="text" id="surname" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="password">Password</label>
+                  <input type="text" id="password" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="admin">Admin</label>
+                  <select id="admin" required>
+                     <option value="">Select</option>
+                     <option>Yes</option>
+                     <option>No</option>
+                  </select>
+               </div>
+
+               <div class="form-field">
+                  <label for="salary">Salary</label>
+                  <input type="text" id="salary" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="position">Position</label>
+                  <input type="text" id="position" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="dateEmployed">Date Employed</label>
+                  <input type="date" id="dateEmployed" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="employmentStatus">Employment Status</label>
+                  <select id="employmentStatus" required>
+                     <option value="">Select</option>
+                     <option>Active</option>
+                     <option>On Leave</option>
+                     <option>Inactive</option>
+                  </select>
+               </div>
+
+               <div class="form-field">
+                  <label for="notes">Notes</label>
+                  <textarea id="notes" rows="4"></textarea>
+               </div>
+            </div>
+
+            <div class="button-group">
+               <button type="submit" class="save-btn">Save Staff Member</button>
+
+               <button type="button" class="cancel-btn" onclick="resetForm()">
+                  Cancel Edit
+               </button>
+            </div>
+         </form>
+      </div>
+
+      <p class="note">
+         Staff information is sensitive, if you are not authorized to view it,
+         please contact your supervisor.
+      </p>
+      
+      <!-- ================= tabel ================= -->
+
+      <div class="table-wrapper">
+         <table class="universal-table">
+            <thead>
+               <tr>
+                  <th>Employee ID</th>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Password</th>
+                  <th>Admin</th>
+                  <th>Salary</th>
+                  <th>Position</th>
+                  <th>Date Employed</th>
+                  <th>Employment Status</th>
+                  <th>Notes</th>
+                  <th>Actions</th>
+               </tr>
+            </thead>
+
+            <tbody id="staffTableBody"></tbody>
+         </table>
+      </div>
+
+      <a href="../Portal/portal.html">
+         <button class="return-btn">Return to Staff Portal</button>
+      </a>
+
+      <script src="staff.js"></script>
+
+   </body>
+</html>
