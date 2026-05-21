@@ -1,0 +1,244 @@
+/* ================= font invoere ================= */
+@font-face {
+   font-family: 'PoiretOne';
+   src: url('../Common_assets/PoiretOne-Regular.ttf') format('truetype');
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'NotoSans';
+   src: url('../Common_assets/NotoSans-Light.ttf') format('truetype');
+   font-display: swap;
+}
+
+/* ================= globale reset en styl ================= */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'NotoSans', Arial, sans-serif;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+main {
+   background: #fff8ed;
+   text-align: center;
+   padding: 40px 20px;
+}
+
+h1 {
+   font-family: 'PoiretOne', Arial, sans-serif;
+   font-size: 42px;
+   margin-bottom: 15px;
+}
+
+h2 {
+   font-size: 28px;
+   margin-bottom: 20px;
+}
+
+/* ================= game uitleg ================= */
+.game-fact-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 40px;
+
+   max-width: 1300px;
+   margin: 40px auto;
+
+   flex-wrap: wrap;
+}
+
+.game-section {
+   flex: 1;
+   min-width: 600px;
+}
+
+/* ================= game grid ================= */
+#grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 110px);
+   justify-content: center;
+   gap: 20px;
+
+   max-width: 700px;
+   margin: 30px auto;
+
+   padding: 25px;
+   border-radius: 30px;
+
+   background: #eadfce;
+}
+
+/* Tile hou die orange image */
+.tile {
+   width: 110px;
+   height: 110px;
+
+   background: white;
+   border-radius: 20px;
+   overflow: hidden;
+}
+
+.orange {
+   width: 100%;
+   height: 100%;
+
+   cursor: pointer;
+   transition: transform 0.1s;
+}
+
+/* Image vul die tile volledig */
+.orange img {
+   width: 100%;
+   height: 100%;
+
+   object-fit: cover;
+
+   user-select: none;
+   -webkit-user-drag: none;
+}
+
+.orange:active {
+   transform: scale(0.9);
+}
+
+/* Versteek oranges wanneer nodig */
+.hidden {
+   visibility: hidden;
+}
+
+/* ================= hud ================= */
+.hud {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 25px;
+
+   margin-top: 25px;
+
+   flex-wrap: wrap;
+}
+
+#timeBox,
+#scoreBox,
+.hudBtn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   height: 100px;
+   padding: 18px 28px;
+
+   background: #6c8f4e;
+   color: white;
+
+   border: none;
+   border-radius: 20px;
+
+   font-size: 26px;
+   font-weight: bold;
+
+   transition: 0.25s;
+}
+
+#timeBox,
+#scoreBox {
+   min-width: 170px;
+}
+
+#timeBox {
+   font-size: 42px;
+}
+
+.hudBtn {
+   width: 100px;
+   min-width: 75px;
+
+   padding: 0;
+   cursor: pointer;
+}
+
+/* Icons binne knoppies */
+.hudBtn img {
+   width: 42px;
+   height: 42px;
+
+   object-fit: contain;
+   pointer-events: none;
+}
+
+.hudBtn:hover:not(.disabledBtn) {
+   background: #5a7a40;
+   transform: translateY(-2px);
+}
+
+.hudBtn:active:not(.disabledBtn) {
+   transform: scale(0.96);
+}
+
+/* Disabled toestand */
+.disabledBtn {
+   background: #9c9c9c;
+   cursor: not-allowed;
+   opacity: 0.7;
+}
+
+/* ================= fun fact boks ================= */
+.orange-fact-box {
+   width: 320px;
+
+   padding: 30px;
+   border-radius: 20px;
+
+   background: #f5efe6;
+   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+   text-align: center;
+}
+
+.fact-text h2 {
+   font-size: 2.2rem;
+   margin-bottom: 20px;
+}
+
+.fact-text p {
+   font-size: 1.2rem;
+   line-height: 1.5;
+
+   margin-bottom: 25px;
+}
+
+.fact-real-image {
+   width: 100%;
+   max-width: 220px;
+
+   border-radius: 16px;
+
+   object-fit: cover;
+   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ================= mobile ================= */
+@media (max-width: 1100px) {
+
+   .game-fact-wrapper {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .game-section {
+      width: 100%;
+      min-width: auto;
+   }
+
+   .orange-fact-box {
+      width: 100%;
+      max-width: 500px;
+   }
+}

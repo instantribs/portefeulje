@@ -1,0 +1,187 @@
+<!doctype html>    <!--Ruben van Quickelberger Portefeulje About Page-->
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>About Us</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="../Common_assets/header_footer.css">
+      <link rel="stylesheet" href="about.css">
+   </head>
+
+   <body>
+      <header>
+         <a href="../Home/home.html" class="logo">
+            <img src="../Common_assets/logo.png" alt="Website Logo">
+         </a>
+
+         <!-- Hamburger knoppie -->
+         <button class="hamburger" id="hamburger-btn">
+            ☰
+         </button>
+
+         <nav id="nav-menu">
+            <a href="../Home/home.html">Home</a>
+            <a href="../About/about.html">About</a>
+            <a href="../Grove/grove.html">Grove</a>
+            <a href="../Fun/fun.html">Fun</a>
+            <a href="../Contact/contact.html">Contact</a>
+            <a href="../Sign/sign.html">Staff&nbsp;Login</a>
+         </nav>
+      </header>
+
+      <main>
+         <section class="hero-section">
+            <div class="text-content">
+               <h1>About Orangeway Farms</h1>
+
+               <p>
+                  For over a century, Orangeway Farms has grown oranges
+                  with patience, care, and respect for the land.
+                  From a small riverside orchard to a trusted regional farm,
+                  our focus has always stayed the same:
+                  quality fruit and sustainable farming.
+               </p>
+            </div>
+
+            <img 
+               src="01.jpg" 
+               alt="Orange orchard landscape"
+               class="section-image"
+            >
+         </section>
+
+         <section class="video-section">
+            <div class="video-text">
+               <h2>Who We Are</h2>
+
+               <p>
+                  Take a second to see Orangeway Farms as we see it —
+                  a place of growth, care, and peace.
+               </p>
+            </div>
+
+            <div class="video-wrapper">
+               <video controls>
+                  <source src="promo.mp4" type="video/mp4">
+
+                  <!-- Rugsteun teks indien video nie ondersteun word nie -->
+                  Your browser does not support the video tag.
+               </video>
+            </div>
+         </section>
+
+         <section class="content-section">
+            <div class="text-content">
+               <h2>Our Story</h2>
+
+               <p>
+                  Orangeway Farms began in 1912 when Elias Hathaway planted
+                  the first orange trees beside a shallow riverbend.
+                  The early years were difficult, with droughts,
+                  uneven harvests, and limited equipment,
+                  but the orchard slowly took root through persistence
+                  and careful cultivation.
+               </p>
+
+               <p>
+                  Over the decades, the farm expanded steadily.
+                  Improved irrigation, modern packing facilities,
+                  and sustainable growing methods helped Orangeway become
+                  known for dependable, high-quality fruit across the region.
+               </p>
+
+               <p>
+                  Today, the farm blends old and new —
+                  preserving original orchard rows while using modern systems
+                  to grow responsibly for future generations.
+               </p>
+            </div>
+
+            <img 
+               src="02.jpg" 
+               alt="Historic orchard trees"
+               class="section-image"
+            >
+         </section>
+
+         <section class="content-section reverse-layout">
+            <img 
+               src="03.jpg" 
+               alt="Fresh oranges being harvested"
+               class="section-image"
+            >
+
+            <div class="text-content">
+               <h2>Our Mission</h2>
+
+               <p>
+                  We believe farming should be sustainable,
+                  thoughtful, and built for the long term.
+                  Every decision — from irrigation to harvesting —
+                  is made with future generations in mind.
+               </p>
+
+               <p>
+                  Orangeway Farms remains proudly hands-on.
+                  We combine traditional farming values with practical innovation
+                  to produce fruit that customers can enjoy year after year.
+               </p>
+            </div>
+         </section>
+
+         <section class="gallery-section">
+            <img src="04.jpg" alt="Orange orchard view">
+            <img src="05.jpg" alt="Farm workers in orchard">
+            <img src="06.jpg" alt="Fresh oranges close-up">
+            <img src="07.jpg" alt="Orange harvest baskets">
+            <img src="08.jpg" alt="Sunset over orchard">
+         </section>
+      </main>
+
+      <footer>
+         <div class="footer-container">
+            <div class="footer-section">
+               <h3><strong>Copyright</strong></h3>
+               <p>&copy; 2023 Orangeway Farms. All rights reserved.</p>
+
+               <img 
+                  src="../Common_assets/mono_logo.png" 
+                  alt="Website Logo"
+                  class="footer-logo"
+               >
+            </div>
+
+            <div class="footer-section">
+               <h3><strong>Explore More</strong></h3>
+
+               <div class="button-grid">
+                  <a href="../Home/home.html"><button class="footer-nav-btn">Home</button></a>
+                  <a href="../Grove/grove.html"><button class="footer-nav-btn">The Grove</button></a>
+                  <a href="../Fun/fun.html"><button class="footer-nav-btn">Fun & Games</button></a>
+                  <a href="../Contact/contact.html"><button class="footer-nav-btn">Contact Us</button></a>
+               </div>
+            </div>
+
+            <div class="footer-section">
+               <h3><strong>Any Questions?</strong></h3>
+
+               <p>You can always reach us through...</p>
+               <p>Our email: info@orangewayfarms.com</p>
+               <p>Our phone : +27 58 132 1345</p>
+               <p>Our whatsapp: 024 681 6326</p>
+            </div>
+         </div>
+      </footer>
+
+      <!-- JavaScript vir Hamburger Menu -->
+      <script>
+         const hamburgerBtn = document.getElementById("hamburger-btn");
+         const navMenu = document.getElementById("nav-menu");
+
+         hamburgerBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+         });
+      </script>
+   </body>
+</html>

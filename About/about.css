@@ -1,0 +1,192 @@
+/* ================= font invoere ================= */
+@font-face {
+   font-family: 'PoiretOne';
+   src: url('../Common_assets/PoiretOne-Regular.ttf') format('truetype');
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'NotoSans';
+   src: url('../Common_assets/NotoSans-Light.ttf') format('truetype');
+   font-display: swap;
+}
+
+/* ================= globale reset ================= */
+* {
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+   font-family: 'NotoSans', Arial, sans-serif;
+}
+
+body {
+   background: #fff8ed;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+/* ================= tipografie ================= */
+h1 {
+   font-family: 'PoiretOne';
+   font-size: 56px;
+}
+
+h2 {
+   font-size: 38px;
+   color: #628345;
+   margin-bottom: 20px;
+}
+
+p {
+   font-size: 18px;
+   line-height: 1.8;
+}
+
+main {
+   padding: 40px 20px;
+}
+
+/* ================= inhoud afdelings ================= */
+.hero-section,
+.content-section {
+   display: grid;
+   grid-template-columns: 1.1fr 1fr;
+   align-items: center;
+   gap: 50px;
+
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 80px 40px;
+}
+
+.reverse-layout {
+   grid-template-columns: 1fr 1.1fr;
+}
+
+.text-content {
+   text-align: left;
+}
+
+.text-content p {
+   margin-top: 20px;
+}
+
+.section-image {
+   width: 100%;
+   height: 450px;
+   object-fit: cover;
+
+   border-radius: 20px;
+   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* ================= video afdeling ================= */
+.video-section {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px 40px 80px;
+}
+
+.video-text {
+   text-align: center;
+   max-width: 750px;
+   margin: 0 auto 40px;
+}
+
+.video-wrapper {
+   overflow: hidden;
+
+   border-radius: 20px;
+   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.video-wrapper video {
+   width: 100%;
+   display: block;
+}
+
+/* ================= gallery ================= */
+.gallery-section {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 15px;
+
+   max-width: 1400px;
+   margin: 0 auto;
+   padding: 20px 40px 80px;
+}
+
+.gallery-section img {
+   width: 100%;
+   height: 240px;
+   object-fit: cover;
+
+   border-radius: 14px;
+   transition: transform 0.3s ease;
+}
+
+.gallery-section img:hover {
+   transform: scale(1.03);
+}
+
+/* ================= tablet ================= */
+@media (max-width: 1024px) {
+
+   .hero-section,
+   .content-section,
+   .reverse-layout {
+      grid-template-columns: 1fr;
+      text-align: center;
+
+      padding: 60px 30px;
+   }
+
+   .text-content {
+      text-align: center;
+   }
+
+   .section-image {
+      height: 350px;
+   }
+
+   .gallery-section {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+/* ================= mobile ================= */
+@media (max-width: 768px) {
+
+   h1 {
+      font-size: 42px;
+   }
+
+   h2 {
+      font-size: 30px;
+   }
+
+   p {
+      font-size: 16px;
+   }
+
+   .hero-section,
+   .content-section {
+      gap: 30px;
+      padding: 50px 20px;
+   }
+
+   .section-image {
+      height: 280px;
+   }
+
+   .gallery-section {
+      grid-template-columns: 1fr;
+   }
+
+   .video-section {
+      padding: 10px 20px 60px;
+   }
+}

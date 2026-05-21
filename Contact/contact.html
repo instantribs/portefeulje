@@ -1,0 +1,142 @@
+<!doctype html>    <!--Ruben van Quickelberger Portefeulje Contact Page-->
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Contact Us</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../Common_assets/header_footer.css">
+      <link rel="stylesheet" href="contact.css">
+   </head>
+
+   <body>
+
+      <header>
+      <a href="../Home/home.html" class="logo">
+         <img src="../Common_assets/logo.png" alt="Website Logo">
+      </a>
+
+      <!-- Hamburger Knoppie -->
+      <button class="hamburger" id="hamburger-btn">
+         ☰
+      </button>
+
+      <nav id="nav-menu">
+         <a href="../Home/home.html">Home</a>
+         <a href="../About/about.html">About</a>
+         <a href="../Grove/grove.html">Grove</a>
+         <a href="../Fun/fun.html">Fun</a>
+         <a href="contact.html">Contact</a>
+         <a href="../Sign/sign.html">Staff&nbsp;Login</a>
+      </nav>
+      </header>
+
+
+      <main>
+
+         <div class="text">
+            <h1>Keep in Touch</h1>
+
+            <p>
+               We'd love to hear from you! Whether you have questions about our
+               products, need assistance with an order, or just want to say hello,
+               feel free to reach out.
+            </p>
+         </div>
+
+         <div class="contact-wrapper">
+            <div class="card message-card">
+               <form id="contactForm" novalidate>
+                  <label for="message">Your Message:</label>
+
+                  <textarea
+                     id="message"
+                     placeholder="Type your message here..."
+                     required></textarea>
+
+                  <small id="messageError" class="error-message"></small>
+
+                  <label for="email" class="email-label">
+                     Your Email:
+                  </label>
+
+                  <div class="email-row">
+                     <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required>
+
+                     <button type="submit" class="send-btn">Send</button>
+                  </div>
+
+                  <small id="emailError" class="error-message"></small>
+               </form>
+            </div>
+
+            <div class="card contact-card">
+
+               <h3>Alternatively...</h3>
+
+               <p>You can always get in touch through:</p>
+
+               <p>Email</p>
+               <div class="contact-pill">
+                  info@orangeway.co.za
+               </div>
+
+               <p>Phone</p>
+               <div class="contact-pill">
+                  +27 58 132 1345
+               </div>
+
+               <p>Whatsapp:</p>
+               <div class="contact-pill">
+                  026 726 4379
+               </div>
+            </div>
+         </div>
+
+      </main>
+
+      <footer>
+         <div class="footer-container">
+            <div class="footer-section">
+               <h3><strong>Copyright</strong></h3>
+               <p>&copy; 2023 Orangeway Farms. All rights reserved.</p>
+               <img src="../Common_assets/mono_logo.png" alt="Website Logo" class="footer-logo">
+            </div>
+                  
+            <div class="footer-section">
+               <h3><strong>Explore More</strong></h3>
+               <div class="button-grid">
+                  <a href="../Home/home.html"><button class="footer-nav-btn">Home</button></a>
+                  <a href="../About/about.html"><button class="footer-nav-btn">About Us</button></a>
+                  <a href="../Grove/grove.html"><button class="footer-nav-btn">The Grove</button></a>
+                  <a href="../Fun/fun.html"><button class="footer-nav-btn">Fun & Games</button></a>
+               </div>
+            </div>
+
+            <div class="footer-section">
+               <h3><strong>Any Questions?</strong></h3>
+               <p>You can always reach us through...</p>
+               <p>Our email: info@orangewayfarms.com</p>
+               <p>Our phone : +27 58 132 1345</p>
+               <p>Our whatsapp: 024 681 6326</p>
+            </div>
+         </div>
+      </footer>
+
+      <!-- JavaScript vir Hamburger Menu -->
+      <script>
+         const hamburgerBtn = document.getElementById("hamburger-btn");
+         const navMenu = document.getElementById("nav-menu");
+
+         hamburgerBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+         });
+      </script>
+
+      <script src="contact.js"></script>
+
+   </body>
+</html>

@@ -1,0 +1,156 @@
+/* ================= font invoere ================= */
+@font-face {
+   font-family: 'PoiretOne';
+   src: url('../Common_assets/PoiretOne-Regular.ttf') format('truetype');
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'NotoSans';
+   src: url('../Common_assets/NotoSans-Light.ttf') format('truetype');
+   font-display: swap;
+}
+
+/* ================= globale reset en styl ================= */
+*{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+   font-family:'NotoSans', Arial, sans-serif;
+}
+
+body{
+   background:#fff8ed;
+   text-align:center;
+}
+
+img{
+   max-width:100%;
+   height:auto;
+}
+
+/* ================= welkom teks ================= */
+.text{
+   padding:40px 20px;
+}
+
+.text h1{
+   font-family:'PoiretOne';
+   font-size:42px;
+   padding-bottom:15px;
+}
+
+.text p{
+   max-width:550px;
+   margin:auto;
+   font-size:20px;
+   color:#333;
+}
+
+/* ================= kontak container ================= */
+.contact-wrapper{
+   width:min(80%, 1200px);
+   margin:40px auto;
+   display:flex;
+   gap:40px;
+   justify-content:center;
+}
+
+.card{
+   background:#eadfce;
+   border-radius:25px;
+   padding:30px;
+}
+
+/* ================= email card ================= */
+.message-card{
+   flex:1;
+   text-align:left;
+}
+textarea,
+.email-row input{
+   border:none;
+   border-radius:20px;
+   background:white;
+   padding:12px;
+}
+
+textarea{
+   width:100%;
+   height:120px;
+   resize:none;
+   margin-top:10px;
+}
+
+.email-row{
+   display:flex;
+   gap:20px;
+   align-items:center;
+}
+
+.email-row input{
+   flex:1;
+}
+
+.error-message{
+   display:block;
+   min-height:20px;
+   color:red;
+   margin-top:5px;
+   margin-bottom:10px;
+   font-size:14px;
+}
+
+.send-btn{
+   border:none;
+   border-radius:20px;
+   background:#d8c8ae;
+   color:#4d3400;
+   cursor:pointer;
+   padding:15px 35px;
+   font-size:28px;
+}
+
+.send-btn:hover{
+   background:#c0b08e;
+}
+
+/* ================= kontak card ================= */
+.contact-card{
+   width:300px;
+}
+
+.contact-pill{
+   padding: 10px 20px;
+   background:#c7bcaa;/*Kleur keuse skep 'inert' gevoel, kan nie geklik word nie*/
+   border-radius:20px;
+}
+
+/* ================= mobile ================= */
+@media (max-width:768px){
+
+   .contact-wrapper{
+      flex-direction:column;
+      width:90%;
+      align-items:center;
+   }
+
+   .contact-card{
+      width:100%;
+      max-width:400px;
+   }
+
+   .email-row{
+      flex-direction:column;
+   }
+
+   .email-row input,
+   .send-btn{
+      width:100%;
+   }
+
+   .send-btn{
+      font-size:20px;
+      padding:12px;
+   }
+}
