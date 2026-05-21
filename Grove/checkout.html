@@ -1,0 +1,96 @@
+<!doctype html>    <!-- Orangeway Farms Checkout -->
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Checkout</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="checkout.css">
+   </head>
+
+   <body>
+
+      <h1>Thanks for your order!</h1>
+
+      <main class="checkout-page">
+
+         <section class="order-box">
+
+            <div class="order-card">
+
+               <h2>Order Details:</h2>
+
+               <div id="cart-items"></div>
+
+               <div class="total-section">
+                  <span>Order Total:</span>
+                  <span id="total-price">R0</span>
+               </div>
+
+               <a href="grove.html" class="continue-btn">
+                  Continue Shopping
+               </a>
+
+            </div>
+         </section>
+
+         <section class="delivery-box">
+
+            <div class="delivery-card">
+
+               <h2>Delivery information</h2>
+
+               <form id="checkout-form">
+
+                  <label for="name">Full name</label>
+                  <input type="text" id="name" name="name">
+
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email">
+
+                  <label for="phone">Cellphone number</label>
+                  <input type="tel" id="phone" name="phone">
+
+                  <label for="street">Street Address</label>
+                  <input type="text" id="street" name="street">
+
+                  <label for="suburb">Suburb</label>
+                  <input type="text" id="suburb" name="suburb">
+
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="city">
+
+                  <label for="province">Province</label>
+                  <select id="province" name="province">
+
+                     <option value="">Select Province</option>
+
+                     <option value="Gauteng">Gauteng</option>
+                     <option value="Western Cape">Western Cape</option>
+                     <option value="Eastern Cape">Eastern Cape</option>
+                     <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                     <option value="Free State">Free State</option>
+                     <option value="Limpopo">Limpopo</option>
+                     <option value="Mpumalanga">Mpumalanga</option>
+                     <option value="North West">North West</option>
+                     <option value="Northern Cape">Northern Cape</option>
+
+                  </select>
+
+                  <label for="notes">Notes</label>
+                  <textarea id="notes" name="notes"></textarea>
+
+                  <button type="submit">
+                     Place Order
+                  </button>
+
+               </form>
+
+            </div>
+         </section>
+
+      </main>
+
+      <script src="checkout.js"></script>
+
+   </body>
+</html>

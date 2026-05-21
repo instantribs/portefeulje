@@ -1,0 +1,140 @@
+<!doctype html>    <!--Ruben van Quickelberger Portefeulje Home Page-->
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Orangeway Farms</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../Common_assets/header_footer.css">
+      <link rel="stylesheet" href="home.css">
+   </head>
+
+   <body>
+      <header>
+         <a href="home.html" class="logo">
+            <img src="../Common_assets/logo.png" alt="Website Logo">
+         </a>
+
+         <!-- Hamburger knoppie -->
+         <button class="hamburger" id="hamburger-btn">
+            ☰
+         </button>
+
+         <nav id="nav-menu">
+            <a href="home.html">Home</a>
+            <a href="../About/about.html">About</a>
+            <a href="../Grove/grove.html">Grove</a>
+            <a href="../Fun/fun.html">Fun</a>
+            <a href="../Contact/contact.html">Contact</a>
+            <a href="../Sign/sign.html">Staff&nbsp;Login</a>
+         </nav>
+      </header>
+
+      <main>
+         <section class="hero">
+            <img src="home-hero.jpg" alt="Image of oranges on a tree">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+               <h1>Welcome to Orangeway Farms!</h1>
+               <p>Simple, fresh, and delicious</p>
+               <p>That's Orangeway!</p>
+
+               <a href="../Grove/grove.html" class="welcome-btn">Shop Now!</a>
+            </div>
+         </section>
+
+         <section class="info-section">
+            <div class="info-text">
+               <h2>About Us</h2>
+               <p>
+                  Learn more about Orangeway Farms, our mission,
+                  and how we bring fresh citrus straight from
+                  the grove to your home.
+               </p>
+
+               <a href="../About/about.html" class="info-btn">Learn More</a>
+            </div>
+
+            <div class="info-image">
+               <img src="home-about.jpg" alt="About Orangeway Farms">
+            </div>
+         </section>
+
+         <section class="banner">
+            <a href="../Grove/grove.html">
+               <img src="home-grove.jpg" alt="Visit the Orangeway Grove">
+               <div class="banner-text">
+                  <h2>The Grove</h2>
+                  <p>Explore our oranges and order something amazing.</p>
+               </div>
+            </a>
+         </section>
+
+         <section class="info-section reverse">
+            <div class="info-image">
+               <img src="gamegif.gif" alt="Fun activities at Orangeway Farms">
+            </div>
+
+            <div class="info-text">
+               <h2>Fun Activities</h2>
+               <p>
+                  Enjoy exciting games for the whole family,
+                  and learn some interesting facts about our citrus fruits.
+               </p>
+
+               <a href="../Fun/fun.html" class="info-btn">Explore Activities</a>
+            </div>
+         </section>
+
+         <section class="banner">
+            <a href="../Contact/contact.html">
+               <img src="home-contact.jpg" alt="Contact Orangeway Farms">
+               <div class="banner-text">
+                  <h2>Contact Us</h2>
+                  <p>Get in touch with us for any inquiries or support.</p>
+               </div>
+            </a>
+         </section>
+
+      </main>
+
+      <footer>
+         <div class="footer-container">
+            <div class="footer-section">
+               <h3><strong>Copyright</strong></h3>
+               <p>&copy; 2023 Orangeway Farms. All rights reserved.</p>
+               <img src="../Common_assets/mono_logo.png" alt="Website Logo" class="footer-logo">
+            </div>
+                
+            <div class="footer-section">
+               <h3><strong>Explore More</strong></h3>
+               <div class="button-grid">
+                  <a href="../About/about.html"><button class="footer-nav-btn">About Us</button></a>
+                  <a href="../Grove/grove.html"><button class="footer-nav-btn">The Grove</button></a>
+                  <a href="../Fun/fun.html"><button class="footer-nav-btn">Fun & Games</button></a>
+                  <a href="../Contact/contact.html"><button class="footer-nav-btn">Contact Us</button></a>
+               </div>
+            </div>
+
+            <div class="footer-section">
+               <h3><strong>Any Questions?</strong></h3>
+               <p>You can always reach us through...</p>
+               <p>Our email: info@orangewayfarms.com</p>
+               <p>Our phone : +27 58 132 1345</p>
+               <p>Our whatsapp: 024 681 6326</p>
+            </div>
+         </div>
+      </footer>
+
+      <!-- JavaScript vir Hamburger Menu -->
+      <script>
+         const hamburgerBtn = document.getElementById("hamburger-btn");
+         const navMenu = document.getElementById("nav-menu");
+
+         hamburgerBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+         });
+      </script>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Orchards Information</title>
+      <link rel="stylesheet" href="../Common_assets/universal_table.css">
+   </head>
+
+   <script>
+      if (localStorage.getItem("loggedIn") !== "true") {
+         alert("You must log in first.");
+         window.location.href = "../SignIn/sign.html";
+      }
+   </script>
+
+   <body>
+
+      <h1>Orchards Information</h1>
+      <p>The state of each orchard is as follows:</p>
+
+      <!-- ================= CRUD form ================= -->
+      <div class="form-container">
+         <h2>Add / Edit Orchard</h2>
+
+         <form id="orchardForm">
+            <input type="hidden" id="editIndex">
+
+            <div class="form-grid">
+               <div class="form-field">
+                  <label for="orchard">Orchard Number</label>
+                  <input type="text" id="orchard" placeholder="Orchard Number" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="fruitType">Fruit Type</label>
+                  <input type="text" id="fruitType" placeholder="Fruit Type" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="hectares">Hectares</label>
+                  <input type="number" id="hectares" placeholder="Hectares" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="healthStatus">Health Status</label>
+                  <select id="healthStatus" required>
+                     <option value="">Health Status</option>
+                     <option>Excellent</option>
+                     <option>Good</option>
+                     <option>Fair</option>
+                     <option>Poor</option>
+                  </select>
+               </div>
+               
+               <div class="form-field">
+                  <label for="nitrogen">Last Treated (Nitrogen)</label>
+                  <input type="date" id="nitrogen" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="phosphate">Last Treated (Phosphate)</label>
+                  <input type="date" id="phosphate" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="potassium">Last Treated (Potassium)</label>
+                  <input type="date" id="potassium" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="micronutrients">Last Treated (Micronutrients)</label>
+                  <input type="date" id="micronutrients" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="pesticides">Last Treated (Pesticides)</label>
+                  <input type="date" id="pesticides" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="irrigation">Irrigation Status</label>
+                  <input type="text" id="irrigation" placeholder="Irrigation Status" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="soilTest">Last Soil Test Date</label>
+                  <input type="date" id="soilTest" required>
+               </div>
+
+               <div class="form-field">
+                  <label for="notes">Notes</label>
+                  <textarea id="notes" placeholder="Notes"></textarea>
+               </div>
+            </div>
+
+            <div class="button-group">
+               <button type="submit" class="save-btn">Save Orchard</button>
+               <button type="button" class="cancel-btn" onclick="resetForm()">Cancel Edit</button>
+            </div>
+         </form>
+      </div>
+
+   <!-- ================= tabel ================= -->
+      <div class="table-wrapper">
+         <table class="universal-table">
+            <thead>
+               <tr>
+                  <th>Orchard</th>
+                  <th>Fruit Type</th>
+                  <th>Hectares</th>
+                  <th>Health Status</th>
+                  <th>Last Treated (Nitrogen)</th>
+                  <th>Last Treated (Phosphate)</th>
+                  <th>Last Treated (Potassium)</th>
+                  <th>Last Treated (Micronutrients)</th>
+                  <th>Last Treated (Pesticides)</th>
+                  <th>Irrigation Status</th>
+                  <th>Last Soil Test Date</th>
+                  <th>Notes</th>
+                  <th>Actions</th>
+               </tr>
+            </thead>
+
+            <tbody id="orchardTableBody"></tbody>
+         </table>
+      </div>
+
+      <a href="../Portal/portal.html">
+         <button class="return-btn">Return to Staff Portal</button>
+      </a>
+
+      <script src="orchards.js"></script>
+
+   </body>
+</html>

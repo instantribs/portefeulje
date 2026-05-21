@@ -1,0 +1,32 @@
+<!doctype html><!--Ruben van Quickelberger Portefeulje Staff Portal-->
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Staff Portal</title>
+      <link rel="stylesheet" href="portal.css">
+   </head>
+
+   <script>
+      if (localStorage.getItem("loggedIn") !== "true") {
+         alert("You must log in first.");
+         window.location.href = "../SignIn/sign.html";
+      }
+   </script>
+   
+   <body>
+      <div class="container">
+         <h1>Staff Portal</h1>
+         <div class="button-grid">
+            <a href="../Home/home.html"><button class="portal-btn">Return to Homepage</button></a>
+            <a href="../Sign/sign.html"><button class="portal-btn">Change User</button></a>
+
+            <a href="../Stock/stock.html"><button class="portal-btn">Stock Information</button></a>
+            <a href="../Orchards/orchards.html"><button class="portal-btn">Orchards Information</button></a>
+
+            <a href="../Orders/orders.html"><button class="portal-btn">Orders Information</button></a>
+            <a href="../Staff/staff.html"><button class="portal-btn">Staff Information</button></a>
+         </div>
+      </div>
+   </body>
+</html>

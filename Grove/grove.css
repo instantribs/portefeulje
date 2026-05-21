@@ -1,0 +1,346 @@
+/* ================= font invoere ================= */
+@font-face {
+   font-family: 'PoiretOne';
+   src: url('../Common_assets/PoiretOne-Regular.ttf') format('truetype');
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'NotoSans';
+   src: url('../Common_assets/NotoSans-Light.ttf') format('truetype');
+   font-display: swap;
+}
+
+/* ================= globale reset en styl ================= */
+* {
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+   font-family: 'NotoSans', Arial, sans-serif;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+body {
+   background: #fff8ed;
+}
+
+/* ================= hoof uitleg ================= */
+.grove-layout {
+   display: flex;
+   flex-direction: column;
+   gap: 60px;
+
+   padding: 60px 40px;
+}
+
+/* ================= produk afdelings ================= */
+.feature-block {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 40px;
+
+   background: #f0e5d4;
+   padding: 40px;
+   border-radius: 25px;
+}
+
+.feature-block.reverse {
+   flex-direction: row-reverse;
+}
+
+/* ================= teks area ================= */
+.feature-text {
+   width: 320px;
+   flex-shrink: 0;
+}
+
+.feature-text h2 {
+   font-family: 'PoiretOne', sans-serif;
+   font-size: 36px;
+
+   margin-bottom: 15px;
+}
+
+.feature-text p {
+   max-width: 300px;
+
+   font-size: 18px;
+   line-height: 1.5;
+}
+
+/* ================= produk kaarte ================= */
+.feature-items {
+   flex: 2;
+
+   display: flex;
+   align-items: stretch;
+   gap: 20px;
+}
+
+.item {
+   flex: 1;
+   min-height: 500px;
+
+   display: flex;
+   flex-direction: column;
+
+   background: #e4d5bf;
+   border-radius: 22px;
+   overflow: hidden;
+
+   transition: transform 0.3s;
+}
+
+.item:hover {
+   transform: translateY(-5px);
+}
+
+.item img {
+   width: 100%;
+   height: 230px;
+   object-fit: cover;
+}
+
+.item h3 {
+   font-size: 22px;
+   margin: 16px 15px 4px;
+}
+
+.price {
+   margin: 0 15px 8px;
+
+   color: #3f5c29;
+   font-size: 16px;
+   font-weight: bold;
+}
+
+.item p {
+   margin: 0 15px 12px;
+
+   color: #222;
+   font-size: 14px;
+   line-height: 1.5;
+}
+
+/* ================= cart kontroles ================= */
+.cart-controls {
+   margin-top: auto;
+   padding: 0 15px 15px;
+
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+/* Weggesteek tot item by cart gevoeg word */
+.quantity-controls {
+   display: none;
+   align-items: center;
+   justify-content: flex-end;
+   gap: 8px;
+}
+
+.quantity-controls.active {
+   display: flex;
+}
+
+.qty-btn {
+   width: 28px;
+   height: 28px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   border: none;
+   border-radius: 50%;
+
+   background: #628345;
+   color: white;
+
+   font-size: 18px;
+   font-weight: bold;
+
+   cursor: pointer;
+   transition: 0.2s;
+}
+
+.qty-btn:hover {
+   background: #3f5c29;
+   transform: scale(1.05);
+}
+
+.qty-display {
+   min-width: 38px;
+   height: 36px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   background: #628345;
+   color: white;
+
+   border-radius: 10px;
+
+   font-size: 17px;
+   font-weight: bold;
+}
+
+.add-cart-btn {
+   width: 100%;
+
+   background: #628345;
+   color: white;
+
+   border: none;
+   border-radius: 12px;
+
+   padding: 11px;
+
+   font-size: 14px;
+   font-weight: bold;
+
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.add-cart-btn:hover {
+   background: #3f5c29;
+}
+
+/* ================= checkout knoppie ================= */
+.checkout-btn {
+   position: fixed;
+   bottom: 25px;
+   right: 25px;
+   z-index: 2000;
+
+   display: flex;
+   align-items: center;
+   gap: 10px;
+
+   background: #628345;
+   color: white;
+
+   text-decoration: none;
+   font-weight: bold;
+
+   padding: 14px 20px;
+   border-radius: 50px;
+
+   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+   transition: 0.3s;
+}
+
+.checkout-btn:hover {
+   background: #3f5c29;
+   transform: scale(1.05);
+}
+
+.checkout-btn img {
+   width: 24px;
+   height: 24px;
+
+   object-fit: contain;
+}
+
+/* ================= tablet ================= */
+@media (max-width: 1200px) and (min-width: 769px) {
+
+   .grove-layout {
+      padding: 40px 20px;
+      gap: 40px;
+   }
+
+   .feature-block,
+   .feature-block.reverse {
+      display: grid;
+      align-items: stretch;
+      gap: 18px;
+
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+         "text large"
+         "small1 small2";
+
+      padding: 25px;
+   }
+
+   .feature-text {
+      grid-area: text;
+
+      width: 100%;
+      padding: 15px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   .feature-text h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+   }
+
+   .feature-text p {
+      max-width: 100%;
+
+      font-size: 16px;
+      line-height: 1.5;
+   }
+
+   /* Verwyder flex uitleg op tablet */
+   .feature-items {
+      display: contents;
+   }
+
+   .item {
+      min-height: 380px;
+   }
+
+   .item img {
+      height: 210px;
+   }
+
+   .item h3 {
+      font-size: 20px;
+   }
+
+   .item p {
+      font-size: 14px;
+   }
+
+   .add-cart-btn {
+      padding: 10px;
+      font-size: 13px;
+   }
+}
+
+/* ================= mobile ================= */
+@media (max-width: 768px) {
+
+   .feature-block,
+   .feature-block.reverse {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   .feature-text p {
+      margin: auto;
+   }
+
+   .feature-items {
+      width: 100%;
+      flex-direction: column;
+   }
+
+   .item {
+      width: 100%;
+   }
+}

@@ -1,0 +1,473 @@
+<!doctype html>    <!--Ruben van Quickelberger Portefeulje Grove Page-->
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>The Grove</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="../Common_assets/header_footer.css">
+      <link rel="stylesheet" href="grove.css">
+   </head>
+
+   <body>
+      <header>
+         <a href="../Home/home.html" class="logo">
+            <img src="../Common_assets/logo.png" alt="Website Logo">
+         </a>
+
+         <!-- Hamburger knoppie -->
+         <button class="hamburger" id="hamburger-btn">
+            ☰
+         </button>
+
+         <nav id="nav-menu">
+            <a href="../Home/home.html">Home</a>
+            <a href="../About/about.html">About</a>
+            <a href="grove.html">Grove</a>
+            <a href="../Fun/fun.html">Fun</a>
+            <a href="../Contact/contact.html">Contact</a>
+            <a href="../Sign/sign.html">Staff&nbsp;Login</a>
+         </nav>
+      </header>
+
+      <main class="grove-layout">
+
+         <section class="feature-block">
+            <div class="feature-text">
+               <h2>The Classics</h2>
+
+               <p>
+                  You can't go wrong with the basics.
+                  These oranges are what makes
+                  Orangeway the best.
+               </p>
+            </div>
+
+            <div class="feature-items">
+
+               <div class="item">
+                  <img src="valencia.jpg" alt="Valencia Orange">
+
+                  <h3>Valencia Orange</h3>
+                  <p class="price">R70 / 3kg</p>
+
+                  <p>
+                     The classic orange, perfect for
+                     juicing and snacking.
+                  </p>
+
+                  <div class="cart-controls">
+                     <div class="quantity-controls">
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Valencia Orange', 70, -1)">
+                           −
+                        </button>
+
+                        <span class="qty-display"
+                           id="qty-Valencia-Orange">
+                           0
+                        </span>
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Valencia Orange', 70, 1)">
+                           +
+                        </button>
+
+                     </div>
+
+                     <button class="add-cart-btn"
+                        onclick="changeQuantity('Valencia Orange', 70, 1)">
+                        Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+               <div class="item">
+                  <img src="navel.jpg" alt="Navel Orange">
+
+                  <h3>Navel Orange</h3>
+                  <p class="price">R85 / 3kg</p>
+
+                  <p>
+                     A sweet and juicy orange perfect
+                     for eating fresh.
+                  </p>
+
+                  <div class="cart-controls">
+                     <div class="quantity-controls">
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Navel Orange', 85, -1)">
+                           −
+                        </button>
+
+                        <span class="qty-display"
+                           id="qty-Navel-Orange">
+                           0
+                        </span>
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Navel Orange', 85, 1)">
+                           +
+                        </button>
+
+                     </div>
+
+                     <button class="add-cart-btn"
+                        onclick="changeQuantity('Navel Orange', 85, 1)">
+                        Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+               <div class="item">
+                  <img src="midknight.jpg" alt="Midknight Orange">
+
+                  <h3>Midknight Valencia Orange</h3>
+                  <p class="price">R95 / 3kg</p>
+
+                  <p>
+                     A rich and distinctive orange variety.
+                  </p>
+
+                  <div class="cart-controls">
+                     <div class="quantity-controls">
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Midknight Valencia Orange', 95, -1)">
+                           −
+                        </button>
+
+                        <span class="qty-display"
+                           id="qty-Midknight-Valencia-Orange">
+                           0
+                        </span>
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Midknight Valencia Orange', 95, 1)">
+                           +
+                        </button>
+
+                     </div>
+
+                     <button class="add-cart-btn"
+                        onclick="changeQuantity('Midknight Valencia Orange', 95, 1)">
+                        Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+            </div>
+         </section>
+
+         <section class="feature-block reverse">
+            <div class="feature-text">
+               <h2>Feeling Fancy</h2>
+
+               <p>
+                  Show off your sophisticated palate
+                  with these unique and flavorful varieties.
+               </p>
+            </div>
+
+            <div class="feature-items">
+
+               <div class="item">
+                  <img src="blood.jpg" alt="Blood Orange">
+
+                  <h3>Blood Orange</h3>
+                  <p class="price">R150 / 3kg</p>
+
+                  <p>
+                     Sweet and tangy with a striking red flesh.
+                  </p>
+
+                  <div class="cart-controls">
+                     <div class="quantity-controls">
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Blood Orange', 150, -1)">
+                           −
+                        </button>
+
+                        <span class="qty-display"
+                           id="qty-Blood-Orange">
+                           0
+                        </span>
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Blood Orange', 150, 1)">
+                           +
+                        </button>
+
+                     </div>
+
+                     <button class="add-cart-btn"
+                        onclick="changeQuantity('Blood Orange', 150, 1)">
+                        Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+               <div class="item">
+                  <img src="caracara.jpg" alt="Cara Cara Orange">
+
+                  <h3>Cara Cara Navel Orange</h3>
+                  <p class="price">R140 / 3kg</p>
+
+                  <p>
+                     A vibrant and flavorful orange variety.
+                  </p>
+
+                  <div class="cart-controls">
+                     <div class="quantity-controls">
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Cara Cara Navel Orange', 140, -1)">
+                           −
+                        </button>
+
+                        <span class="qty-display"
+                           id="qty-Cara-Cara-Navel-Orange">
+                           0
+                        </span>
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Cara Cara Navel Orange', 140, 1)">
+                           +
+                        </button>
+
+                     </div>
+
+                     <button class="add-cart-btn"
+                        onclick="changeQuantity('Cara Cara Navel Orange', 140, 1)">
+                        Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+               <div class="item">
+                  <img src="grapefruit.jpg" alt="Ruby Grapefruit">
+
+                  <h3>Ruby Grapefruit</h3>
+                  <p class="price">R100 / 3kg</p>
+
+                  <p>
+                     Refreshing grapefruit with ruby-red flesh.
+                  </p>
+
+                  <div class="cart-controls">
+                     <div class="quantity-controls">
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Ruby Grapefruit', 100, -1)">
+                           −
+                        </button>
+
+                        <span class="qty-display"
+                           id="qty-Ruby-Grapefruit">
+                           0
+                        </span>
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Ruby Grapefruit', 100, 1)">
+                           +
+                        </button>
+
+                     </div>
+
+                     <button class="add-cart-btn"
+                        onclick="changeQuantity('Ruby Grapefruit', 100, 1)">
+                        Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+            </div>
+         </section>
+
+         <section class="feature-block">
+            <div class="feature-text">
+               <h2>Something Else</h2>
+
+               <p>
+                  Looking for variety?
+                  These citrus fruits are a great way
+                  to mix things up and add some excitement
+                  to your meals and drinks.
+               </p>
+            </div>
+
+            <div class="feature-items">
+
+               <div class="item">
+                  <img src="lemon.jpg" alt="Lemon">
+
+                  <h3>Lemon</h3>
+                  <p class="price">R100 / 3kg</p>
+
+                  <p>
+                     Bright and zesty lemons
+                     for drinks and cooking.
+                  </p>
+
+                  <div class="cart-controls">
+                     <div class="quantity-controls">
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Lemon', 100, -1)">
+                           −
+                        </button>
+
+                        <span class="qty-display"
+                           id="qty-Lemon">
+                           0
+                        </span>
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Lemon', 100, 1)">
+                           +
+                        </button>
+
+                     </div>
+
+                     <button class="add-cart-btn"
+                        onclick="changeQuantity('Lemon', 100, 1)">
+                        Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+               <div class="item">
+                  <img src="lime.jpg" alt="Lime">
+
+                  <h3>Lime</h3>
+                  <p class="price">R120 / 1.5kg</p>
+
+                  <p>
+                     Fresh and tangy limes.
+                  </p>
+
+                  <div class="cart-controls">
+                     <div class="quantity-controls">
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Lime', 120, -1)">
+                           −
+                        </button>
+
+                        <span class="qty-display"
+                           id="qty-Lime">
+                           0
+                        </span>
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Lime', 120, 1)">
+                           +
+                        </button>
+
+                     </div>
+
+                     <button class="add-cart-btn"
+                        onclick="changeQuantity('Lime', 120, 1)">
+                        Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+               <div class="item">
+                  <img src="naartjie.jpg" alt="Naartjie">
+
+                  <h3>Naartjie</h3>
+                  <p class="price">R80 / 3kg</p>
+
+                  <p>
+                     Sweet South African citrus favorite.
+                  </p>
+
+                  <div class="cart-controls">
+                     <div class="quantity-controls">
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Naartjie', 80, -1)">
+                           −
+                        </button>
+
+                        <span class="qty-display"
+                           id="qty-Naartjie">
+                           0
+                        </span>
+
+                        <button class="qty-btn"
+                           onclick="changeQuantity('Naartjie', 80, 1)">
+                           +
+                        </button>
+
+                     </div>
+
+                     <button class="add-cart-btn"
+                        onclick="changeQuantity('Naartjie', 80, 1)">
+                        Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+            </div>
+         </section>
+
+      </main>
+
+      <a href="checkout.html" class="checkout-btn">
+         <img src="cart.png" alt="Shopping Cart Icon">
+         <span>Checkout</span>
+      </a>
+
+      <footer>
+         <div class="footer-container">
+            <div class="footer-section">
+               <h3><strong>Copyright</strong></h3>
+               <p>&copy; 2023 Orangeway Farms. All rights reserved.</p>
+
+               <img 
+                  src="../Common_assets/mono_logo.png" 
+                  alt="Website Logo"
+                  class="footer-logo"
+               >
+            </div>
+
+            <div class="footer-section">
+               <h3><strong>Explore More</strong></h3>
+
+               <div class="button-grid">
+                  <a href="../Home/home.html"><button class="footer-nav-btn">Home</button></a>
+                  <a href="../About/about.html"><button class="footer-nav-btn">The Grove</button></a>
+                  <a href="../Fun/fun.html"><button class="footer-nav-btn">Fun & Games</button></a>
+                  <a href="../Contact/contact.html"><button class="footer-nav-btn">Contact Us</button></a>
+               </div>
+            </div>
+
+            <div class="footer-section">
+               <h3><strong>Any Questions?</strong></h3>
+
+               <p>You can always reach us through...</p>
+               <p>Our email: info@orangewayfarms.com</p>
+               <p>Our phone : +27 58 132 1345</p>
+               <p>Our whatsapp: 024 681 6326</p>
+            </div>
+         </div>
+      </footer>
+
+      <!-- JavaScript vir Hamburger Menu -->
+      <script>
+         const hamburgerBtn = document.getElementById("hamburger-btn");
+         const navMenu = document.getElementById("nav-menu");
+
+         hamburgerBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+         });
+      </script>
+
+      <script src="grove.js"></script>
+   </body>
+</html>
